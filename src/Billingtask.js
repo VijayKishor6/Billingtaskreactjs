@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Button, Card, Col, Container, Form, InputGroup, Row, Table } from "react-bootstrap";
+import Detailstable from "./Detailstable";
 
-export const Billingtask = () => {
+export const Billingtask = ({submitData}) => {
   // State to store input values and error messages
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -11,10 +12,6 @@ export const Billingtask = () => {
   const [passwordError, setPasswordError] = useState("");
   const [firstNameError, setFirstNameError] = useState("");
   const [lastNameError, setLastNameError] = useState("");
-  const [stateB , setStateB]=useState([]);
-
-
-
 
 
   // Function to handle form submission
@@ -28,7 +25,7 @@ export const Billingtask = () => {
   
     };
 
-    setStateB((prevB) =>[...prevB,newState]);
+    submitData(newState);
 
     // Resetting previous error messages
     setEmailError("");
@@ -63,14 +60,15 @@ export const Billingtask = () => {
     if (isValid) {
       // Submit the form or handle your logic here
     }
-
+console.log(submitData,"submitData");
+console.log(handleSubmit,"handleSubmit");
 
   };
 
   return (
     <Container>
       <Row>
-        <Col xs={9} className="mt-5">
+        <Col xs={12} className="mt-5">
           <Card className="p-2">
             <Row>
               <Col className="text-end">
@@ -139,46 +137,16 @@ export const Billingtask = () => {
               <Col xs={9}>
                 By creating an account, you agree to the <a href="#">Terms And Conditions</a> set out by this site, including our <a href="#">Cookies Use</a>
               </Col>
-              <Col xs={3} className="text-end">
-                <Button variant="danger" className="px-5" onClick={handleSubmit}>
+              <Col xs={2} className="text-end">
+                <Button variant="danger" className="w-100" onClick={handleSubmit}>
                   Submit
                 </Button>
               </Col>
             </Row>
           </Card>
-          <Card className="mt-2 p-2">Concert</Card>
-          <Card className="mt-2 p-2">Concert</Card>
-        </Col>
-        <Col sx={3} className="mt-5">
-          <Card className="p-2">Order Summary</Card>
-        </Col>
-      </Row>
-      <Row className="mt-3">
-       
-      <Table>
-        <thead>
-          <tr>
-            <th>S.No</th>
-            <th>Email Address</th>
-            <th>Password</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-          </tr>
-        </thead>
-        <tbody>
-        {stateB.map((item,index) => (
-          <tr>
-            <td>{index+1}</td>
-            <td>{item.email}</td>
-            <td>{item.password}</td>
-            <td>{item.firstname}</td>
-            <td>{item.lastname}</td>
-         </tr>
-             ))}
-        </tbody>
         
-      </Table>
-     
+        </Col>
+       
       </Row>
     </Container>
   );
