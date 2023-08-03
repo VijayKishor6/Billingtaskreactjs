@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Row, Table } from 'react-bootstrap'
+import { Row, Table } from 'react-bootstrap'
 
 const Detailstable = ({stateB}) => {
   return (

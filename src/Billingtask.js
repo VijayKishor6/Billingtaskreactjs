@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Button, Card, Col, Container, Form, InputGroup, Row, Table } from "react-bootstrap";
-import Detailstable from "./Detailstable";
+import { Button, Card, Col, Container, Form, InputGroup, Row } from "react-bootstrap";
 
 export const Billingtask = ({submitData}) => {
   // State to store input values and error messages
