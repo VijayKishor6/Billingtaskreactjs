@@ -1,13 +1,102 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+.card {
+  background-color: white !important;
+  padding: 17px !important;
+  margin-top: 15px !important;
+  border-radius: 16px !important;
+  color:#484e5c !important;
+}
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold !important; 
+}
+body{
+    background-color: rgb(228,231,237) !important ;  
+}
+.no {
+  color: #57bcd6 !important;
+}
+.input-group-text{
+  background-color: white;
+  padding: 6px 12px !important;  
+}
+.form-control{
+  padding: 12px 12px !important;
+  background-color: #f5f6fa !important;
+  font-weight: bold !important;
+  border-radius: 18px !important;
+  border-color: white !important;
+  }
+ .bordernone{
+    border-right: none !important;
+    border-radius: 18px 0px 0px 18px !important;
+    padding: 12px 12px !important;
+   
+  }
+p{
+  font-size:small !important;
+  border-radius: 18px;
+}
+@media only screen and (max-width: 768px) {
+  .mbtn{
+       width: 100% !important;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.show{
+  background-color: #f5f6fa !important;
+  color:#f5f6fa !important;
+  border-radius: 0px 18px 18px 0px !important;
+  padding: 12px 12px !important;
+  border-color: white !important;
+  
+}
+a {
+  text-decoration: none;
+  
+}
+ 
+span a{
+  color:rgb(170, 168, 168);
+} 
+
+.terms{
+  color:#757f89;
+  font-size: 85% !important;
+  padding:6px;
+}
+
+
+.showop{
+  text-decoration:underline !important;
+}
+@media only screen and (max-width: 425px) {
+  .sign{
+         text-align: center;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .terms{    
+      padding-left: 0%;
+      padding-right: 0%;
+  }
+}
+  @media only screen and (max-width: 425px) {
+    .mobilecard{
+      padding: 10%; }
+  }
+.mobilecard{
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+.link{
+  color:  #2bc0e5 !important ;
+}
+.password{
+  font-size: medium !important;
+}
+hr{
+  color:grey !important;
 }
