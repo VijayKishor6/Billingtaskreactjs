@@ -1,6 +1,7 @@
 import moment from 'moment/moment'
 import React from 'react'
-import { Row, Table } from 'react-bootstrap'
+import { Button, Row, Table } from 'react-bootstrap'
+import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 
 const Detailstable = ({stateB}) => {
   return (
@@ -32,7 +33,7 @@ const Detailstable = ({stateB}) => {
           <td>{item.lastname}</td> 
           <td>{moment().format('MMMM Do YYYY')}</td>
           <td>{moment().format('h:mm:ss a')}</td>
-          <td></td>
+          <td><Button  style={{backgroundColor:"white",borderColor:"white", color:"black"}}><AiFillEdit/></Button><Button style={{backgroundColor:"white",borderColor:"white", color:"black"}}><AiFillDelete/></Button></td>
        </tr>
            ))):(<tr ><td className='text-center ' colSpan={8}><h3>No Data Found</h3></td></tr>)}
       </tbody>
