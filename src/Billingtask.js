@@ -1,23 +1,37 @@
 import React, { useState } from "react";
 import { Button, Form, InputGroup } from "react-bootstrap";
 
-export const Billingtask = ({ submitData }) => {
+export const Billingtask = ({
+  submitData,
+  posta,
+  setId,
+  id,
+  email,
+  password,
+  firstName,
+  lastName,
+  setEmail,
+  setPassword,
+  setFirstName,
+  setLastName,
+}) => {
   // State to store input values and error messages
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  console.log(firstName, "firstName");
+  console.log(email, "email");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [firstNameError, setFirstNameError] = useState("");
   const [lastNameError, setLastNameError] = useState("");
+
   // Function to handle form submission
   const handleSubmit = () => {
+    setId(id + 1);
     const newState = {
+      id: id + 1,
       email: email,
       password: password,
-      firstname: firstName,
-      lastname: lastName,
+      firstName: firstName,
+      lastName: lastName,
     };
 
     // Resetting previous error messages
@@ -70,8 +84,13 @@ export const Billingtask = ({ submitData }) => {
       const textRegex = /^[A-Za-z\s]+$/;
       return textRegex.test(input);
     }
+
     if (isValid) {
       submitData(newState);
+      setEmail("");
+      setPassword("");
+      setFirstName("");
+      setLastName("");
     }
     console.log(submitData, "submitData");
     console.log(handleSubmit, "handleSubmit");
