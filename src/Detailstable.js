@@ -11,6 +11,7 @@ const Detailstable = ({
   setPassword,
   setFirstName,
   setLastName,
+  posta
 }) => {
   const deletedata = (index) => {
     const x = [...stateB];
@@ -19,6 +20,7 @@ const Detailstable = ({
   };
 
   const editData = (item) => {
+    posta(item)
     setEmail(item.email);
     setPassword(item.password);
     setFirstName(item.firstName);
